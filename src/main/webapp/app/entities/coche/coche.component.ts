@@ -7,7 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ICoche } from 'app/shared/model/coche.model';
 import { CocheService } from './coche.service';
 import { CocheDeleteDialogComponent } from './coche-delete-dialog.component';
-import { CochePurchaseDialogComponent } from './coche-purhase-dialog.component';
+import { CochePurchaseDialogComponent } from './coche-purchase-dialog.component';
 
 @Component({
   selector: 'jhi-coche',
