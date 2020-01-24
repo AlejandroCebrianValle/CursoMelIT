@@ -17,10 +17,7 @@ export class CochePurchaseDialogComponent {
     this.activeModal.dismiss();
   }
 
-  confirmDelete(id: number): void {
-    this.cocheService.delete(id).subscribe(() => {
-      this.eventManager.broadcast('cocheListModification');
-      this.activeModal.close();
-    });
+  confirmPurchase(vendido: boolean): void {
+    this.cocheService.update(coche.vendido);
   }
 }
