@@ -24,8 +24,7 @@ export class CocheUpdateComponent implements OnInit {
     matricula: [null, []],
     precio: [],
     vendido: [],
-    fechaventa: [],
-    owner: []
+    fechaventa: []
   });
 
   constructor(protected cocheService: CocheService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -44,8 +43,7 @@ export class CocheUpdateComponent implements OnInit {
       matricula: coche.matricula,
       precio: coche.precio,
       vendido: coche.vendido,
-      fechaventa: coche.fechaventa,
-      owner: coche.owner
+      fechaventa: coche.fechaventa
     });
   }
 
@@ -56,10 +54,6 @@ export class CocheUpdateComponent implements OnInit {
   save(): void {
     this.isSaving = true;
     const coche = this.createFromForm();
-    if (!coche.vendido) {
-      coche.owner = undefined;
-      coche.fechaventa = undefined;
-    }
     if (coche.id !== undefined) {
       this.subscribeToSaveResponse(this.cocheService.update(coche));
     } else {
@@ -76,8 +70,7 @@ export class CocheUpdateComponent implements OnInit {
       matricula: this.editForm.get(['matricula'])!.value,
       precio: this.editForm.get(['precio'])!.value,
       vendido: this.editForm.get(['vendido'])!.value,
-      fechaventa: this.editForm.get(['fechaventa'])!.value,
-      owner: this.editForm.get(['owner'])!.value
+      fechaventa: this.editForm.get(['fechaventa'])!.value
     };
   }
 

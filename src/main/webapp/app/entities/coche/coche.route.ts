@@ -78,5 +78,17 @@ export const cocheRoute: Routes = [
       pageTitle: 'mycarsApp.coche.home.title'
     },
     canActivate: [UserRouteAccessService]
+  },
+  {
+    path: ':id/purchase',
+    component: CocheUpdateComponent,
+    resolve: {
+      coche: CocheResolve
+    },
+    data: {
+      authorities: ['ROLE_USER'],
+      pageTitle: 'mycarsApp.coche.home.title'
+    },
+    canActivate: [UserRouteAccessService]
   }
 ];

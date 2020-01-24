@@ -36,12 +36,7 @@
                     <input type="checkbox" class="form-control" name="vendido" id="field_vendido"
                            formControlName="vendido"/>
                 </div>
-                <div *ngIf="this.editForm.get(['vendido'])!.value" class="form-group">
-                    <label class="form-control-label" for="field_owner">Dueño</label>
-                    <input type="text" class="form-control" name="owner" id="field_owner"
-                           formControlName="owner"/>
-                </div>
-                <div *ngIf="this.editForm.get(['vendido'])!.value" class="form-group">
+                <div class="form-group">
                     <label class="form-control-label" jhiTranslate="mycarsApp.coche.fechaventa" for="field_fechaventa">Fechaventa</label>
                     <div class="input-group">
                         <input id="field_fechaventa" type="text" class="form-control" name="fechaventa" ngbDatepicker  #fechaventaDp="ngbDatepicker" formControlName="fechaventa"/>

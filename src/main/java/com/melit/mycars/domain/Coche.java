@@ -37,19 +37,8 @@ public class Coche implements Serializable {
 
     @Column(name = "fechaventa")
     private LocalDate fechaventa;
-    
-    @Column(name = "owner")
-    private String owner;
 
-    public String getOwner() {
-		return owner;
-	}
-
-	public void setOwner(String owner) {
-		this.owner = owner;
-	}
-
-	// jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
     }
@@ -163,7 +152,6 @@ public class Coche implements Serializable {
             ", precio=" + getPrecio() +
             ", vendido='" + isVendido() + "'" +
             ", fechaventa='" + getFechaventa() + "'" +
-            ", owner='" + getOwner() + "'" +
             "}";
     }
 }

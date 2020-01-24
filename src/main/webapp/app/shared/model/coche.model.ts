@@ -8,7 +8,6 @@ export interface ICoche {
   precio?: number;
   vendido?: boolean;
   fechaventa?: Moment;
-  owner?: string;
 }
 
 export class Coche implements ICoche {
@@ -19,8 +18,7 @@ export class Coche implements ICoche {
     public matricula?: string,
     public precio?: number,
     public vendido?: boolean,
-    public fechaventa?: Moment,
-    public owner?: string
+    public fechaventa?: Moment
   ) {
     this.vendido = this.vendido || false;
   }
